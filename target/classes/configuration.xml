@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<settings>
+	<!-- mybatis의 parameter null 값 오류 시 해결 방법 -->
+	<setting name = "jdbcTypeForNull" value="NULL"/>
+</settings>
+	<typeAliases>
+		<typeAlias alias="product" type="com.meta.shop.model.Product" />
+		<typeAlias alias="member" type="com.meta.shop.model.Member" />
+		
+	</typeAliases>
+	<mappers>
+		<mapper resource="product.xml"/>
+		<mapper resource="member.xml"/>
+	</mappers>
+</configuration>

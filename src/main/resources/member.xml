@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   <mapper namespace="memberns">
+   	
+   	<!-- 회원가입 -->
+   	<insert id="insert" parameterType="member">
+   		INSERT INTO MEMBER VALUES (#{mId}, #{mPw}, #{mName}, #{mEmail}, #{mAddress}, #{mPhone}, 'N', 'N', now())
+   	</insert>
+   	
+   	<!-- 회원가입 전 id로 일반 회원 정보 조회 -->
+   	<select id="select" parameterType="string" resultType="member">
+   		SELECT * FROM MEMBER WHERE m_id=#{mId} AND m_del='N' AND m_admin='N'
+   	</select>
+   
+   <!-- 로그인 -->
+   	<select id="login" parameterType="string" resultType="member">
+   		SELECT * FROM MEMBER WHERE m_id=#{mId} AND m_del='N' AND m_admin='N'
+   	</select>
+   	
+   	<!-- 회원정보 수정 -->
+	<update id="update" parameterType="member">
+		update member set m_pw=#{mPw}, m_name=#{mName}, m_email=#{mEmail}, m_Address=#{mAddress}, m_phone=#{mPhone} 
+			where id=#{id}
+	</update>
+   </mapper>

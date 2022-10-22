@@ -1,5 +1,8 @@
 package com.meta.shop.controller;
 
+
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -18,9 +21,12 @@ public class MemberController {
 	
 	
 	@Autowired
-	private MemberService ms;  //Memberservice.java°¡ membercontroller¿¡ ÀÚµ¿ ÁÖÀÔ
+	private MemberService ms;  
 	
-	@RequestMapping("loginForm") //·Î±×ÀÎ ÆäÀÌÁö ÀÌµ¿
+    @Autowired
+	private HttpSession session;
+	
+	@RequestMapping("loginForm") //ë¡œê·¸ì¸form
 		public String loginForm(Model model, HttpServletRequest request) {
 		String prevUrl = request.getHeader("referer");
 		prevUrl = prevUrl.substring(21);
@@ -28,8 +34,7 @@ public class MemberController {
 		return "member/loginForm";
 		
 	}
-	
-	@RequestMapping("joinForm")  //È¸¿ø°¡ÀÔ ÆäÀÌÁö ÀÌµ¿
+	@RequestMapping("joinForm")  //íšŒì›ê°€ì…form
 		public String joinForm(Model model, HttpServletRequest request) {
 		String prevUrl = request.getHeader("referer");
 		prevUrl = prevUrl.substring(21);
@@ -41,7 +46,7 @@ public class MemberController {
 	@RequestMapping("joinAction")
 		public String joinAction(Member member, HttpSession session, Model model, HttpServletRequest request) throws Exception {
 		String prevUrl = (String) request.getAttribute("prevUrl");
-		Member member1 = ms.select(member.getmId()); //¾ÆÀÌµğ Ã£¾Æº¸±â
+		Member member1 = ms.select(member.getmId()); 
 		int result = 0;
 		if(member1 == null) {
 			result = ms.insert(member);			
@@ -54,4 +59,12 @@ public class MemberController {
 		return "member/joinAction";
 	}
 
+	//ê³ ê° ê´€ë¦¬ ëª©ë¡ í™”ë©´ <ê´€ë¦¬ì> 
+	@RequestMapping("memberList")
+	public String memberList(Member member, HttpSession session, Model model) {
+		List<Member> mList = ms.memberList(member);
+		model.addAttribute("mList", mList);
+		System.out.println(mList);
+		return "member/memberList";
+	}
 }

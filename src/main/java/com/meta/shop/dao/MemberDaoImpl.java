@@ -1,5 +1,7 @@
 package com.meta.shop.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -20,6 +22,11 @@ public class MemberDaoImpl implements MemberDao {
 	@Override
 	public Member select(String mId) {
 		return sst.selectOne("memberns.select", mId);
+	}
+
+	@Override
+	public List<Member> memberList(Member member) {
+		return sst.selectList("memberns.mList", member);
 	}
 
 }

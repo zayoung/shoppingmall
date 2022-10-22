@@ -1,12 +1,24 @@
 package com.meta.shop.service;
 
+import java.util.List;
+
 import com.meta.shop.model.Member;
 
 public interface MemberService {
 
-	// È¸¿ø°¡ÀÔ
+	// ê³ ê°ì •ë³´ insert
 	public int insert(Member member) throws Exception;
 
-	Member select(String mId); //È¸¿ø°¡ÀÔ
+	// id ì¡°íšŒ
+	Member select(String mId); 
+	
+	//ëª©ë¡ ì¡°íšŒ
+	List<Member> memberList(Member member);
+	
+	//ê³ ê° ì •ë³´ update
+	void memberUpdate(Member member);
+	
+	//ê³ ê° ì •ë³´ ì‚­ì œ
+	void memverDelete(int mId);
 
 }

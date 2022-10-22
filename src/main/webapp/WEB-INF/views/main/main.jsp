@@ -8,5 +8,8 @@
 </head>
 <body>
 	<%@include file = "../header.jsp" %>
+	
+
+	<a href="memberList.do">memberList</a>
 </body>
 </html>

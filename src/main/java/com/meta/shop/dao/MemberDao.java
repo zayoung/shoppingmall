@@ -1,13 +1,17 @@
 package com.meta.shop.dao;
 
+import java.util.List;
+
 import com.meta.shop.model.Member;
 
 public interface MemberDao {
 	
-	//È¸¿ø°¡ÀÔ
+	//íšŒì›ê°€ì…
 	int insert(Member member);
 
 	Member select(String mId);
+
+	List<Member> memberList(Member member);
 
 	
 

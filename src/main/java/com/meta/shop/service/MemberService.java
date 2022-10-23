@@ -1,5 +1,6 @@
 package com.meta.shop.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.meta.shop.model.Member;
@@ -20,5 +21,8 @@ public interface MemberService {
 	
 	//고객 정보 삭제
 	void memverDelete(int mId);
+
+	//로그인
+	Member login(Member member);
 
 }

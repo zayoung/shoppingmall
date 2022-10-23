@@ -1,5 +1,6 @@
 package com.meta.shop.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,11 @@ public class MemberServiceImpl implements MemberService{
 	public void memverDelete(int mId) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Member login(Member member) {
+		return md.login(member);
 	}
 
 

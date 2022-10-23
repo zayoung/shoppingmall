@@ -12,7 +12,8 @@
 <div id="content">
 	<h3>고객 목록</h3>
 	<!-- CSS 파일을 변경 후에 바로 Refresh가 안된다면 common.css 파일로 들어가서 바로 Refresh 해주면 적용 된다. -->
-	<table class="w-pct60">
+	
+	<table class="list">
 		<tr>
 			<th>아이디</th>
 			<th>이름</th>

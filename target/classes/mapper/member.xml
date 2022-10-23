@@ -3,7 +3,11 @@
    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
    <mapper namespace="memberns">
-
+	<!-- 로그인 -->
+	<select id="login" resultType="member">
+		select m_id, m_pw from member where m_id=#{mId} and m_pw=#{mPw}
+	</select>
+	
    	<!-- 회원가입 -->
    	<insert id="insert" parameterType="member">
    		INSERT INTO MEMBER VALUES (#{mId}, #{mPw}, #{mName}, #{mEmail}, #{mAddress}, #{mPhone}, 'N', 'N', now())
@@ -11,11 +15,6 @@
    	
    	<!-- 회원가입 전 id로 일반 회원 정보 조회 -->
    	<select id="select" parameterType="string" resultType="member">
-   		SELECT * FROM MEMBER WHERE m_id=#{mId} AND m_del='N' AND m_admin='N'
-   	</select>
-   
-   <!-- 로그인 -->
-   	<select id="login" parameterType="string" resultType="member">
    		SELECT * FROM MEMBER WHERE m_id=#{mId} AND m_del='N' AND m_admin='N'
    	</select>
    	

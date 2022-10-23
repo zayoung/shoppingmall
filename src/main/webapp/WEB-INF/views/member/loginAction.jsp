@@ -10,13 +10,13 @@
 <body>
 	<c:if test="${result>-1 }">
 	<script>
-		alert("가입 성공");
+		alert("로그인 성공");
 		location.href="main.do";
 	</script>
 	</c:if>
 	<c:if test="${result<0 }">
 	<script>
-		alert("가입 실패");
+		alert("로그인 실패! 정보를 다시 입력하세요");
 		history.back();
 	</script>
 	</c:if>

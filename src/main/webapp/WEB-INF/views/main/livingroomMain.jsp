@@ -21,9 +21,9 @@
 		<ul>
 			<c:forEach var="pList" items="${pList }">
 				<li class="pListSlide">
-					<a href="pDetail.do?p_num=${pList.p_num }"></a>
-					<img src = "resources/pic/${pList.p_image }">
-					<div class="menu_p_name">${pList.p_name }</div>
+					<a href="pDetail.do?p_num=${pList.pNum }"></a>
+					<img src = "resources/pic/${pList.pImage }">
+					<div class="menu_p_name">${pList.pName }</div>
 					</li>
 			</c:forEach>
 		</ul>

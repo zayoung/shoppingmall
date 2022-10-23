@@ -28,6 +28,7 @@ public class MainController {
 		String sort = "B";
 		List<Product> pList = ps.selectPList(sort);
 		model.addAttribute("pList", pList);
+		System.out.println(pList);
 		return "main/bedroomMain";
 	}
 	
@@ -62,5 +63,12 @@ public class MainController {
 		List<Product> pList = ps.selectPList(sort);
 		model.addAttribute("pList", pList);
 		return "main/livingPropMain";
+	}
+	
+	@RequestMapping("pDetail")
+	public String pDetail(int pNum, Model model) {
+		Product dp = ps.detailProduct(pNum);
+		model.addAttribute("dp", dp);
+		return "main/pDetail";
 	}
 }

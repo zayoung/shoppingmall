@@ -1,5 +1,6 @@
 package com.meta.shop.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -28,5 +29,9 @@ public class MemberDaoImpl implements MemberDao {
 	public List<Member> memberList(Member member) {
 		return sst.selectList("memberns.mList", member);
 	}
-
+	
+	@Override
+	public Member login(Member member) {
+		return sst.selectOne("memberns.login", member);
+	}
 }

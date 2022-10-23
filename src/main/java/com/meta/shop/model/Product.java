@@ -2,75 +2,75 @@ package com.meta.shop.model;
 
 public class Product {
 	
-	private int p_num;
-	private String p_name;
-	private String p_kind;
-	private int p_price1;
-	private int p_price2;
-	private int p_price3;
-	private String p_text;
-	private String p_image;
-	private int p_viewcount;
-	private String p_rgstdate;
-	public int getP_num() {
-		return p_num;
+	private int pNum;
+	private String pName;
+	private String pKind;
+	private int pPrice1;
+	private int pPrice2;
+	private int pPrice3;
+	private String pText;
+	private String pImage;
+	private int pViewcount;
+	private String pRgstdate;
+	public int getpNum() {
+		return pNum;
 	}
-	public void setP_num(int p_num) {
-		this.p_num = p_num;
+	public void setpNum(int pNum) {
+		this.pNum = pNum;
 	}
-	public String getP_name() {
-		return p_name;
+	public String getpName() {
+		return pName;
 	}
-	public void setP_name(String p_name) {
-		this.p_name = p_name;
+	public void setpName(String pName) {
+		this.pName = pName;
 	}
-	public String getP_kind() {
-		return p_kind;
+	public String getpKind() {
+		return pKind;
 	}
-	public void setP_kind(String p_kind) {
-		this.p_kind = p_kind;
+	public void setpKind(String pKind) {
+		this.pKind = pKind;
 	}
-	public int getP_price1() {
-		return p_price1;
+	public int getpPrice1() {
+		return pPrice1;
 	}
-	public void setP_price1(int p_price1) {
-		this.p_price1 = p_price1;
+	public void setpPrice1(int pPrice1) {
+		this.pPrice1 = pPrice1;
 	}
-	public int getP_price2() {
-		return p_price2;
+	public int getpPrice2() {
+		return pPrice2;
 	}
-	public void setP_price2(int p_price2) {
-		this.p_price2 = p_price2;
+	public void setpPrice2(int pPrice2) {
+		this.pPrice2 = pPrice2;
 	}
-	public int getP_price3() {
-		return p_price3;
+	public int getpPrice3() {
+		return pPrice3;
 	}
-	public void setP_price3(int p_price3) {
-		this.p_price3 = p_price3;
+	public void setpPrice3(int pPrice3) {
+		this.pPrice3 = pPrice3;
 	}
-	public String getP_text() {
-		return p_text;
+	public String getpText() {
+		return pText;
 	}
-	public void setP_text(String p_text) {
-		this.p_text = p_text;
+	public void setpText(String pText) {
+		this.pText = pText;
 	}
-	public String getP_image() {
-		return p_image;
+	public String getpImage() {
+		return pImage;
 	}
-	public void setP_image(String p_image) {
-		this.p_image = p_image;
+	public void setpImage(String pImage) {
+		this.pImage = pImage;
 	}
-	public int getP_viewcount() {
-		return p_viewcount;
+	public int getpViewcount() {
+		return pViewcount;
 	}
-	public void setP_viewcount(int p_viewcount) {
-		this.p_viewcount = p_viewcount;
+	public void setpViewcount(int pViewcount) {
+		this.pViewcount = pViewcount;
 	}
-	public String getP_rgstdate() {
-		return p_rgstdate;
+	public String getpRgstdate() {
+		return pRgstdate;
 	}
-	public void setP_rgstdate(String p_rgstdate) {
-		this.p_rgstdate = p_rgstdate;
+	public void setpRgstdate(String pRgstdate) {
+		this.pRgstdate = pRgstdate;
 	}
-
+	
 }

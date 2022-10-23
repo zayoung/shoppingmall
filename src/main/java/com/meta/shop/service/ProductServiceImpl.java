@@ -18,4 +18,9 @@ public class ProductServiceImpl implements ProductService {
 		return pd.selectPList(sort);
 	}
 
+	@Override
+	public Product detailProduct(int pNum) {
+		return pd.detailProduct(pNum);
+	}
+
 }

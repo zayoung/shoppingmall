@@ -1,7 +1,8 @@
 package com.meta.shop.service;
 
-import java.util.HashMap;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import com.meta.shop.model.Member;
 
@@ -11,18 +12,22 @@ public interface MemberService {
 	public int insert(Member member) throws Exception;
 
 	// id 조회
-	Member select(String mId); 
+	public Member select(String mId)throws Exception; 
 	
 	//목록 조회
-	List<Member> memberList(Member member);
+	public List<Member> memberList(Member member)throws Exception;
 	
 	//고객 정보 update
-	void memberUpdate(Member member);
+	public void memberUpdate(Member member)throws Exception;
 	
 	//고객 정보 삭제
-	void memverDelete(int mId);
+	public int memberDelete(int mId)throws Exception;
 
 	//로그인
-	Member login(Member member);
+	public Member login(Member member)throws Exception;
+	
+	//로그아웃
+	public void logout(HttpSession session)throws Exception;
+
 
 }

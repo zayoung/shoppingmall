@@ -7,14 +7,16 @@ import com.meta.shop.model.Member;
 public interface MemberDao {
 	
 	//회원가입
-	int insert(Member member);
+	int insert(Member member)throws Exception;
 	
-	Member select(String mId);
+	Member select(String mId)throws Exception;
 	
 	//회원 리스트
-	List<Member> memberList(Member member);
+	List<Member> memberList(Member member)throws Exception;
 
-	Member login(Member member);
+	public Member login(Member member) throws Exception;
+
+	int memberDelete(int mId) throws Exception;
 
 
 	

@@ -3,6 +3,8 @@ package com.meta.shop.service;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,7 @@ public class MemberServiceImpl implements MemberService{
 	private MemberDao md;
 
 	@Override
-	public Member select(String mId) {
+	public Member select(String mId) throws Exception {
 		return md.select(mId);
 	}
 
@@ -26,25 +28,30 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public List<Member> memberList(Member member) {
+	public List<Member> memberList(Member member) throws Exception{
 		return md.memberList(member);
 	}
 
 	@Override
-	public void memberUpdate(Member member) {
+	public void memberUpdate(Member member) throws Exception{
 		
 	}
 
 	@Override
-	public void memverDelete(int mId) {
-		// TODO Auto-generated method stub
+	public int memberDelete(int mId) throws Exception{
+		return md.memberDelete(mId);
 		
 	}
 
 	@Override
-	public Member login(Member member) {
+	public Member login(Member member) throws Exception{
 		return md.login(member);
 	}
 
+	@Override
+	public void logout(HttpSession session) throws Exception {
+		session.invalidate();
+		
+	}
 
 }

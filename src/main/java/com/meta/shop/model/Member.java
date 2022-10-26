@@ -11,6 +11,11 @@ public class Member {
 	private String mDel;
 	private String mRgstDate;
 	
+	
+	
+	public Member() {
+	}
+	
 	public String getmId() {
 		return mId;
 	}
@@ -65,7 +70,7 @@ public class Member {
 	public void setmRgstDate(String mRgstDate) {
 		this.mRgstDate = mRgstDate;
 	}
-	
+
 	
 
 }

@@ -24,17 +24,23 @@
 <header>
 		<div class="header1">
 			<ul class="header1_ul">
-				<c:if test="${empty id }">
+				<c:if test="${id == null }">
 					<li><a href="loginForm.do">Login</a></li>
 					<li><a href="joinForm.do">Join</a></li>
 				</c:if>
-				<c:if test="${not empty id }">
+				<c:if test="${id != null }">
 					<li>${id }님</li>
 					<li><a href="logout.do">Logout</a></li>
-					</c:if>
-					<li class="page" id="h1"><a href="" onclick="return sessionChk()"> Mypage</a></li>
+					<% String id = (String)session.getAttribute("id");
+						if(id!=null&&id.equals("admin")){ %>
+					<li><a href="memberList.do">memberList</a></li>
+					<%	
+					}
+					%>
+					<li class="page" id="h1"><a href="myPage.do" onclick="return sessionChk()"> Mypage</a></li>
 					<li class="page" id="h2"><a href="" onclick="return sessionChk()"> Q&A</a></li>
 					<li class="page" id="h3"><a href="" onclick="return sessionChk()"> Cart</a></li>
+				</c:if>
 			</ul>
 		</div>
 		<div class="header_logo">

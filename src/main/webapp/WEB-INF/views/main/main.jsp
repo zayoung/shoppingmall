@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>welcome FUNNIC<title>
+<title>welcome FUNNIC</title>
 </head>
 <body>
 	<%@include file = "../header.jsp" %>

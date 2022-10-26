@@ -8,13 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:if test="${result>-1 }">
+	<c:if test="${member != null }">
 	<script>
 		alert("로그인 성공");
 		location.href="main.do";
 	</script>
 	</c:if>
-	<c:if test="${result<0 }">
+	<c:if test="${member == null }">
 	<script>
 		alert("로그인 실패! 정보를 다시 입력하세요");
 		history.back();

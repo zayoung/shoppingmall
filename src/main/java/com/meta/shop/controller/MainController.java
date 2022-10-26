@@ -28,7 +28,6 @@ public class MainController {
 		String sort = "B";
 		List<Product> pList = ps.selectPList(sort);
 		model.addAttribute("pList", pList);
-		System.out.println(pList);
 		return "main/bedroomMain";
 	}
 	
@@ -45,7 +44,6 @@ public class MainController {
 		String sort = "K";
 		List<Product> pList = ps.selectPList(sort);
 		model.addAttribute("pList", pList);
-		System.out.println(pList);
 		return "main/kitchenMain";
 	}
 	

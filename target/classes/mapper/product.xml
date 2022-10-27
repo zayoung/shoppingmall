@@ -13,4 +13,25 @@
    	<select id="detail" resultType="product">
    		SELECT * FROM PRODUCT WHERE P_NUM=#{pNum} ORDER BY p_rgstdate
    	</select>
+   	
+   	<!-- 조회 수 높은 가구 - bed -->
+   	<select id="bestBedList" resultType="product">
+   		SELECT * FROM PRODUCT WHERE P_KIND='B' ORDER BY p_viewcount LIMIT 3
+   	</select>
+   	<!-- 조회 수 높은 가구 - kit -->
+   	<select id="bestKitchenList" resultType="product">
+   		SELECT * FROM PRODUCT WHERE P_KIND='L' ORDER BY p_viewcount LIMIT 3
+   	</select>
+   	<!-- 조회 수 높은 가구 - lib -->
+   	<select id="bestLibraryList" resultType="product">
+   		SELECT * FROM PRODUCT WHERE P_KIND='K' ORDER BY p_viewcount LIMIT 3
+   	</select>
+   	<!-- 조회 수 높은 가구 - liv -->
+   	<select id="bestLivingList" resultType="product">
+   		SELECT * FROM PRODUCT WHERE P_KIND='D' ORDER BY p_viewcount LIMIT 3
+   	</select>
+   	<!-- 조회 수 높은 가구 - livp -->
+   	<select id="bestPropList" resultType="product">
+   		SELECT * FROM PRODUCT WHERE P_KIND='P' ORDER BY p_viewcount LIMIT 3
+   	</select>
    </mapper>

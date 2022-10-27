@@ -23,4 +23,29 @@ public class ProductServiceImpl implements ProductService {
 		return pd.detailProduct(pNum);
 	}
 
+	@Override
+	public List<Product> bestBedList() {
+		return pd.bestBedList();
+	}
+
+	@Override
+	public List<Product> bestKitchenList() {
+		return pd.bestKitchenList();
+	}
+
+	@Override
+	public List<Product> bestLibraryList() {
+		return pd.bestLibraryList();
+	}
+
+	@Override
+	public List<Product> bestLivingList() {
+		return pd.bestLivingList();
+	}
+
+	@Override
+	public List<Product> bestPropList() {
+		return pd.bestPropList();
+	}
+
 }

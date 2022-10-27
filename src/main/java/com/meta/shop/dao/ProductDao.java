@@ -9,4 +9,14 @@ public interface ProductDao {
 
 	Product detailProduct(int pNum);
 
+	List<Product> bestBedList();
+
+	List<Product> bestKitchenList();
+
+	List<Product> bestLibraryList();
+
+	List<Product> bestLivingList();
+
+	List<Product> bestPropList();
+
 }

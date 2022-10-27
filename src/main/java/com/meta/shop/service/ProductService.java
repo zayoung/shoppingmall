@@ -9,6 +9,16 @@ public interface ProductService {
 	List<Product> selectPList(String sort);
 
 	Product detailProduct(int pNum);
+
+	List<Product> bestBedList();
+
+	List<Product> bestKitchenList();
+
+	List<Product> bestLibraryList();
+
+	List<Product> bestLivingList();
+
+	List<Product> bestPropList();
 	
 	
 

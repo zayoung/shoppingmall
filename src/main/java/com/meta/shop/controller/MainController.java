@@ -18,11 +18,6 @@ public class MainController {
 	@Autowired
 	ProductService ps;
 	
-	@RequestMapping("main.do")
-	public String main() {
-		return "main/main";
-	}
-	
 	@RequestMapping("bedroomMain")
 	public String bedroomMain(Product product, HttpSession session, Model model) {
 		String sort = "B";
@@ -69,4 +64,26 @@ public class MainController {
 		model.addAttribute("dp", dp);
 		return "main/pDetail";
 	}
+	
+	@RequestMapping("main")
+	public String main(Product product, HttpSession session, Model model) {
+		//bestBedList
+		List<Product> bestBedList = ps.bestBedList();
+		model.addAttribute("bestBedList", bestBedList);
+		//bestKitchenList
+		List<Product> bestKitchenList = ps.bestKitchenList();
+		model.addAttribute("bestKitchenList", bestKitchenList);
+		//bestLibraryList
+		List<Product> bestLibraryList = ps.bestLibraryList();
+		model.addAttribute("bestLibraryList", bestLibraryList);
+		//bestLivingList
+		List<Product> bestLivingList = ps.bestLivingList();
+		model.addAttribute("bestLivingList", bestLivingList);
+		//bestPropList
+		List<Product> bestPropList = ps.bestPropList();
+		model.addAttribute("bestPropList", bestPropList);
+		
+		return "main/main";
+	}
+	
 }

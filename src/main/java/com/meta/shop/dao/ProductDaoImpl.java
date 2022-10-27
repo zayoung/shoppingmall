@@ -23,4 +23,29 @@ public class ProductDaoImpl implements ProductDao {
 		return sst.selectOne("productns.detail", pNum);
 	}
 
+	@Override
+	public List<Product> bestBedList() {
+		return sst.selectList("productns.bestBedList");
+	}
+
+	@Override
+	public List<Product> bestKitchenList() {
+		return sst.selectList("productns.bestKitchenList");
+	}
+
+	@Override
+	public List<Product> bestLibraryList() {
+		return sst.selectList("productns.bestLibraryList");
+	}
+
+	@Override
+	public List<Product> bestLivingList() {
+		return sst.selectList("productns.bestLivingList");
+	}
+
+	@Override
+	public List<Product> bestPropList() {
+		return sst.selectList("productns.bestPropList");
+	}
+
 }
